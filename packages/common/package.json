@@ -8,9 +8,9 @@
     "yup": "^0.26.7"
   },
   "devDependencies": {
-    "@types/yup": "^0.26.4",
-    "rimraf": "^2.6.3",
-    "typescript": "^3.2.4"
+    "@types/yup": "0.26.4",
+    "rimraf": "2.6.3",
+    "typescript": "3.2.4"
   },
   "scripts": {
     "build": "rimraf ./dist && tsc"
