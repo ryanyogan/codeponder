@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "repository": "git@github.com:ryanyogan/ts-monorepo-boilerplate.git",
+  "author": "Ryan Yogan <ryanyogan@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "resolutions": {
+    "graphql": "14.0.2"
+  },
+  "devDependencies": {
+    "lerna": "3.10.5"
+  },
+  "scripts": {
+    "build:server": "lerna run build --scope={@codeponder/common,@codeponder/server}",
+    "build:web": "lerna run build --scope={@codeponder/ui,@codeponder/common,@codeponder/web}"
+  }
+}

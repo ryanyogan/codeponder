@@ -1,0 +1,3 @@
+# ts-next-graphql-boilerplate
+
+This is boilerplate for now, it will become a CLI, I may want CRA or Next, etc...
