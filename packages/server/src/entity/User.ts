@@ -8,7 +8,7 @@ export class User extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   readonly id: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ type: "text", unique: true, nullable: true })
   username?: string;
 
