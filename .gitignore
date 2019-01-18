@@ -6,3 +6,5 @@ tmp/
 temp/
 dist
 .next
+*.log
+yarn-error.log
