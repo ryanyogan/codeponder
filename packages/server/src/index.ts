@@ -15,6 +15,7 @@ import { buildSchema } from "type-graphql";
 import { UserResolver } from "./modules/user/UserResolver";
 import { User } from "./entity/User";
 import { redis } from "./redis";
+import { createUser } from "./utils/createUser";
 
 const RedisStore = connectRedis(session as any);
 
@@ -83,14 +84,14 @@ const startServer = async () => {
         let user = await User.findOne({ where: { githubId: profile.id } });
 
         if (!user) {
-          user = await User.create({
+          user = await createUser({
+            username: profile.username,
             githubId: profile.id,
             pictureUrl: profile._json.avatar_url,
             bio: profile._json.bio,
-          }).save();
+            name: profile._json.name,
+          });
         }
-
-        console.log("New User", user);
 
         cb(null, {
           user,
