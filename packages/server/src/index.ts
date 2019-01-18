@@ -1,4 +1,5 @@
 import "reflect-metadata";
+require("dotenv-safe").config();
 import { ApolloServer } from "apollo-server-express";
 import * as express from "express";
 import { createTypeormConn } from "./createTypeormConn";
