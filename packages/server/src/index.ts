@@ -115,7 +115,7 @@ const startServer = async () => {
         req.session!.refreshToken = req.user.refreshToken;
       }
 
-      res.redirect("http://localhost:3000");
+      res.redirect("http://localhost:3000/pick-username");
     }
   );
 
