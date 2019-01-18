@@ -27,6 +27,7 @@ const startServer = async () => {
     schema: await buildSchema({
       resolvers: [UserResolver],
     }),
+    context: ({ req }: any) => ({ req }),
   });
 
   app.set("trust proxy", 1);

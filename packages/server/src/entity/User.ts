@@ -6,7 +6,7 @@ import { ObjectType, Field, ID } from "type-graphql";
 export class User extends BaseEntity {
   @Field(() => ID)
   @PrimaryGeneratedColumn("uuid")
-  id: string;
+  readonly id: string;
 
   @Field()
   @Column({ type: "text", unique: true, nullable: true })
