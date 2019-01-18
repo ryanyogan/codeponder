@@ -11,7 +11,7 @@ const handle = routes.getRequestHandler(app);
 
 app.prepare().then(() => {
   createServer((req, res) => {
-    const parsedUrl = parse(req.url, true);
+    const parsedUrl = parse(req.url as any, true);
 
     handle(req, res, parsedUrl);
   }).listen(port, (err: any) => {

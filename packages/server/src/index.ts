@@ -1,7 +1,11 @@
 import "reflect-metadata";
 require("dotenv-safe").config();
-import { ApolloServer } from "apollo-server-express";
+
 import * as express from "express";
+import * as passport from "passport";
+import { ApolloServer } from "apollo-server-express";
+import { Strategy as GithubStrategy } from "passport-github";
+
 import { createTypeormConn } from "./createTypeormConn";
 import { buildSchema } from "type-graphql";
 import { UserResolver } from "./modules/user/UserResolver";
@@ -16,6 +20,20 @@ const startServer = async () => {
       resolvers: [UserResolver]
     })
   });
+
+  passport.use(
+    new GithubStrategy(
+      {
+        clientID: process.env.GITHUB_CLIENT_ID!,
+        clientSecret: process.env.GITHUB_CLIENT_SECRET!,
+        callbackURL: "http://localhost:4000/auth/github/callback"
+      },
+      (accessToken, refreshToken, profile, cb) => {
+        console.log(profile);
+        cb(null, {});
+      }
+    )
+  );
 
   server.applyMiddleware({ app }); // app is from an existing express app
 
