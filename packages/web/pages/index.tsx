@@ -1,10 +1,8 @@
 import * as React from "react";
 
-import { Button } from "@codeponder/ui";
-
 const index = () => (
   <div>
-    <Button>Hi</Button>
+    <p>index.tsx</p>
   </div>
 );
 
