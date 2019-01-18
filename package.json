@@ -15,6 +15,7 @@
   },
   "scripts": {
     "build:server": "lerna run build --scope={@codeponder/common,@codeponder/server}",
-    "build:web": "lerna run build --scope={@codeponder/ui,@codeponder/common,@codeponder/web}"
+    "build:web": "lerna run build --scope={@codeponder/ui,@codeponder/common,@codeponder/web}",
+    "build:all": "yarn run build:server && yarn run build:web"
   }
 }
