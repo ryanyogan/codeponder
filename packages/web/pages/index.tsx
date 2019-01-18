@@ -17,6 +17,7 @@ export default class Index extends React.PureComponent {
       `,
     });
 
+    // @ts-ignore
     return response.data.me;
   }
 
