@@ -11,7 +11,7 @@
     "graphql": "14.1.1"
   },
   "devDependencies": {
-    "lerna": "3.10.5"
+    "lerna": "3.13.1"
   },
   "scripts": {
     "build:server": "lerna run build --scope={@codeponder/common,@codeponder/server}",
