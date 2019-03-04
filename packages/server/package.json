@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@graphql-modules/epoxy": "0.2.18",
-    "@graphql-modules/sonar": "0.2.18",
+    "@graphql-modules/sonar": "0.4.0",
     "apollo-server-express": "2.3.1",
     "argon2": "0.20.0",
     "connect-redis": "^3.4.0",
