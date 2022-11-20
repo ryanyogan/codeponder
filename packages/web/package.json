@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/cookie": "^0.3.2",
     "@types/next": "7.0.6",
-    "@types/react": "16.7.20",
+    "@types/react": "16.14.34",
     "@types/react-dom": "16.0.11",
     "@types/styled-components": "4.1.6",
     "@zeit/next-css": "1.0.1",
